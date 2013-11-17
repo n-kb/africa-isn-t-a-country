@@ -52,7 +52,9 @@ $(function () {
             },
             xAxis: {
                 categories: xAxis_labels,
-                step: 2
+                labels: {
+                    step: 2
+                }
             },
             yAxis: {
                 title: {
