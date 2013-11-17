@@ -7,10 +7,13 @@ var express = require('express'),
     async = require('async'),
     moment = require('moment');
 
+var http = require('http');
+
 var weeklyCount = require('./weeklyCount.js'),
     Evt = require('./evt_model.js');
 
-var app = module.exports = express.createServer();
+var app = express();
+var server = http.createServer(app);
 
 // Database
 var mongo_URI = process.env['MONGOLAB_URI'] || 'mongodb://localhost:27017/africa';
@@ -92,6 +95,6 @@ app.get('/api/data', function (req, res) {
 });
 
 
-app.listen(port, function () {
-    console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+server.listen(port, function () {
+    console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
 });
