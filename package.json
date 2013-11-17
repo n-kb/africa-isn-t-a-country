@@ -1,0 +1,18 @@
+{
+  "name": "Africa-isnt-a-country"
+  , "description": "Counting occurences of Africa in the media"
+  , "version": "0.0.1"
+  ,"engines": {
+    "node": "0.10.x",
+    "npm":  "1.1.x"
+  }
+  , "private": true
+  , "dependencies": {
+      "express": "3.x"
+    , "moment": "*"
+    , "mongoose": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "async": "*"
+    , "less-middleware": "*"
+  }
+}
