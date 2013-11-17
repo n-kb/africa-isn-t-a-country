@@ -51,7 +51,8 @@ $(function () {
                 x: -20
             },
             xAxis: {
-                categories: xAxis_labels
+                categories: xAxis_labels,
+                step: 2
             },
             yAxis: {
                 title: {
