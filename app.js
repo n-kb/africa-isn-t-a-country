@@ -84,7 +84,7 @@ app.get('/api/evts', function (req, res) {
 
 app.get('/api/data', function (req, res) {
 
-    return Evt.find({}).sort('startdate').limit(20).exec(function (err, evt) {
+    return Evt.find({}).sort('startdate').limit(40).exec(function (err, evt) {
         if (!err) {
             return res.send(evt);
         } else {
