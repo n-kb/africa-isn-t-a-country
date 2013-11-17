@@ -1,33 +1,60 @@
-.row
-	.span12
-		h1 Africa isn't a country!
-		h2 So why do journalists treat it as if it were?
-		p Many journalists have no problem describing someone from Botswana and another from Mauritania as "Africans". They probably wouldn't call them "Americans" if they were from Brazil and from the United States, even though the distance between the two is the same - and the economic conditions are as different.
-		p You don't have a film called <em>Out of Asia</em> and you rarely go to <em>Oceania</em> on holidays (instead you talk of vacations in Australia, New Zealand or another island). For a continent of 1 billion people 3 times the size of the US, it's no problem to call it by one single name - <em>"Africa"</em>! This is hugely detrimental to many countries. When a civil war starts in the Central African Republic (Africa!), it negatively impacts countries as far away as Senegal (Africa!) and Lesotho (Africa!). This has to change.
-		p What can be measured can be changed. By measuring how many articles talk of "Africa" without mentioning a specific country, we show how widespread the prejudice against the continent actually is. And we give journalists a tool to measure their progress towards more sensible reporting. 
-		p Because "Europe" is used to describe the European Union and "America" is used as a synonym for the United States, the coverage of Africa can only be compared with that of Asia. See how The Guardian, for instance, uses "Africa" as an all-purpose word to describe anything from Tangiers to Cape Town. Comparing the mentions of the 3 biggest African economies with the 3 biggest Asian ones, we see how much less precise reporting of African countries remains. Guardian journalist don't use "Asia" when talking of Hyderabad or Shenzen. They use "India" and "China".
-		p <iframe src="http://cf.datawrapper.de/IDxCY/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="500" height="300"></iframe><iframe src="http://cf.datawrapper.de/s3CdV/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="500" height="300"></iframe>
-		.insert
-			img(src="/assets/moz.jpg")
-		p <small>Somewhere in Africa (courtesy of <a href="http://www.flickr.com/photos/7155605@N03/5251900236/in/photolist-916mY5-4ZGubZ-cdQmkW-916fqL-4dWXts-4dT42v-4dT3PR-4dX1E7-4dT32n-4dWZyW-4dX11G-4dX3aw-4dSZn8-4dWSmL-4dSZNX-21fnH8-21jzfA-21fL9e-21k77f-21fczD-21jHMN-21jwsd-21fz56-21k7Vd-21jULG-21jXHE-7Dgub3-7DcD5p-8njhja-dUcCUx-6fgssb-8nnpwo-7Dgs1W-bPiKpx-68jfVW-8ZrLpR-7DcHgk-72TwYF-8oPxdV-915thE-7mA4DR-8ZrKbg-7Fv4v2-4dT6en-4dSUoM-4dTasM-4dT9pZ-21jyv3-21fHva-21jAb7-21jvVU">ILRI</a>)</small>
-		p The New-York Times and The Guardian offer powerful APIs (a way for computers to query their articles automatically) so that we can follow the proportion of articles that mention only "Africa" (and no African country) in both newspapers. It is not a perfect measure by any means, but it's the best available.
-		p The graph is updated every week. The goal is to bring the red lines (Africa) to the level of the gray ones (Asia). You can do it. 
-.row
-	.span12
-		#graph
+!!!
+html
+	head
+		title Africa isn't a country!
+	
+	link(rel='stylesheet', href='/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+	link(rel='stylesheet', href='/css/custom.css')
+	link(rel='icon', href='/assets/favicon.ico')
+	link(href='http://fonts.googleapis.com/css?family=Permanent+Marker', rel='stylesheet', type='text/css')
 
-.row
-	.span12
-		.insert
-			img(src="/assets/mauritania.jpg")
-		p <small>4,000 miles away, still African (courtesy of <a href="http://www.flickr.com/photos/oxfam/8655300366/">Oxfam</a>)</small>
-		h1 F.A.Q.
-		h2 Who did this?
-		p <a href="http://nkb.fr">Nicolas Kayser-Bril</a>, a data-driven journalist and co-founder of <a href="http://paris.jplusplus.org">Journalism++ SAS</a>. I did it mostly to refresh my node.js skills.
-		h2 Why just the Guardian and the New-York Times?
-		p They have good APIs. 
-		h2 How can I see my newspaper in here?
-		p If you want your news outlet to be included, send me a note at nkb@jplusplus.org
-		h2 This is all neo-colonialist racism!
-		p Might be. I'm just describing a situation, not making judgements.
-script(type='text/javascript', src="/js/graph.js")
+	script(type='text/javascript', src='/js/jquery.js')
+	script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js')
+	script(type='text/javascript', src='/js/bootstrap.min.js')
+	script(type='text/javascript', src='http://code.highcharts.com/highcharts.js')
+
+	meta(content='width=device-width, initial-scale=1.0', name='viewport')
+	meta(content='Africa isnt a country!', name='description')
+	meta(content='IE=edge,chrome=1', http-equiv='X-UA-Compatible')
+	meta(charset='utf-8')
+	meta(content='Africa is not a country!', name='og:title')
+	meta(content='Africa is always depicted as a single bloc. Time for a change.', name='og:description')
+	meta(content='http://www.africaisntacountry.com', name='og:url')
+
+	body
+		.container
+			.row
+				.span12
+					h1 Africa isn't a country!
+					h2 So why do journalists treat it as if it were?
+					p Many journalists have no problem describing someone from Botswana and another from Mauritania as "Africans". They probably wouldn't call them "Americans" if they were from Brazil and from the United States, even though the distance between the two is the same - and the economic conditions are as different.
+					p You don't have a film called <em>Out of Asia</em> and you rarely go to <em>Oceania</em> on holidays (instead you talk of vacations in Australia, New Zealand or another island). For a continent of 1 billion people 3 times the size of the US, it's no problem to call it by one single name - <em>"Africa"</em>! This is hugely detrimental to many countries. When a civil war starts in the Central African Republic (Africa!), it negatively impacts countries as far away as Senegal (Africa!) and Lesotho (Africa!). This has to change.
+					p What can be measured can be changed. By measuring how many articles talk of "Africa" without mentioning a specific country, we show how widespread the prejudice against the continent actually is. And we give journalists a tool to measure their progress towards more sensible reporting. 
+					p Because "Europe" is used to describe the European Union and "America" is used as a synonym for the United States, the coverage of Africa can only be compared with that of Asia. See how The Guardian, for instance, uses "Africa" as an all-purpose word to describe anything from Tangiers to Cape Town. Comparing the mentions of the 3 biggest African economies with the 3 biggest Asian ones, we see how much less precise reporting of African countries remains. Guardian journalist don't use "Asia" when talking of Hyderabad or Shenzen. They use "India" and "China".
+					p <iframe src="http://cf.datawrapper.de/IDxCY/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="500" height="300"></iframe><iframe src="http://cf.datawrapper.de/s3CdV/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="500" height="300"></iframe>
+					.insert
+						img(src="/assets/moz.jpg")
+					p <small>Somewhere in Africa (courtesy of <a href="http://www.flickr.com/photos/7155605@N03/5251900236/in/photolist-916mY5-4ZGubZ-cdQmkW-916fqL-4dWXts-4dT42v-4dT3PR-4dX1E7-4dT32n-4dWZyW-4dX11G-4dX3aw-4dSZn8-4dWSmL-4dSZNX-21fnH8-21jzfA-21fL9e-21k77f-21fczD-21jHMN-21jwsd-21fz56-21k7Vd-21jULG-21jXHE-7Dgub3-7DcD5p-8njhja-dUcCUx-6fgssb-8nnpwo-7Dgs1W-bPiKpx-68jfVW-8ZrLpR-7DcHgk-72TwYF-8oPxdV-915thE-7mA4DR-8ZrKbg-7Fv4v2-4dT6en-4dSUoM-4dTasM-4dT9pZ-21jyv3-21fHva-21jAb7-21jvVU">ILRI</a>)</small>
+					p The New-York Times and The Guardian offer powerful APIs (a way for computers to query their articles automatically) so that we can follow the proportion of articles that mention only "Africa" (and no African country) in both newspapers. It is not a perfect measure by any means, but it's the best available.
+					p The graph is updated every week. The goal is to bring the red lines (Africa) to the level of the gray ones (Asia). You can do it. 
+			.row
+				.span12
+					#graph
+
+			.row
+				.span12
+					.insert
+						img(src="/assets/mauritania.jpg")
+					p <small>4,000 miles away, still African (courtesy of <a href="http://www.flickr.com/photos/oxfam/8655300366/">Oxfam</a>)</small>
+					h1 F.A.Q.
+					h2 Who did this?
+					p <a href="http://nkb.fr">Nicolas Kayser-Bril</a>, a data-driven journalist and co-founder of <a href="http://paris.jplusplus.org">Journalism++ SAS</a>. I did it mostly to refresh my node.js skills.
+					h2 Why just the Guardian and the New-York Times?
+					p They have good APIs. 
+					h2 How can I see my newspaper in here?
+					p If you want your news outlet to be included, send me a note at nkb@jplusplus.org
+					h2 This is all neo-colonialist racism!
+					p Might be. I'm just describing a situation, not making judgements.
+			
+			script(type='text/javascript', src="/js/graph.js")
