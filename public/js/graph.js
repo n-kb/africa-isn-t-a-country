@@ -14,7 +14,7 @@ $(function () {
             var startdate = moment(evt.startdate);
 
             if (evt.brand == "The Guardian"){
-                xAxis_labels.push("Week of " + startdate.format("MMM Do"));
+                xAxis_labels.push("Week of " + startdate.subtract('days', 7).format("MMM Do"));
                 dataGuardianAsia.push(Math.round(evt.proportion_Asia * 1000));
                 dataGuardianAfrica.push(Math.round(evt.proportion_Africa * 1000));
             } else if(evt.brand == "The New-York Times") {
